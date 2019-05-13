@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Produtos {% endblock %}
+
+{% block main %}
+<h1>Tem certeza que deseja deletar o produto: '{{product.name}}' ?</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button class="btn btn-danger" type="submit">Delete</button>
+</form>
+{% endblock %}
